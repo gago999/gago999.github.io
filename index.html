@@ -47,7 +47,9 @@
 	<div class="section" id="blog">
 		<h1 id="id165">博客</h1>
 		<p>我现在主要更新的是放在阿里云上的<a href="https://gago9.cn/" target="_blank">Typecho博客</a>，主要记录自己在学习过程中的心得体会。近期内容：</p>
+		<!--
 		<div class="loading"><img src="./images/loading.gif">正在加载...</div>
+		-->
 	</div>	
 
 	<!--
@@ -83,7 +85,7 @@
 
 <script type="text/javascript">
 		$(document).ready(function() {
-			$.getJSON("http://yanping.me/cn/recent.json",function(data){
+			$.getJSON("./recent.json",function(data){
 				var content ="<ul class=\"compact recent\">";
 				$.each(data,function(i,item){
 				
@@ -92,7 +94,7 @@
 				});
 				
 				content +="</ul>";
-				$("#blog .loading").remove();
+				<!--$("#blog .loading").remove();-->
 				$("#blog").append(content);
 			});
 
